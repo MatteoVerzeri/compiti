@@ -40,9 +40,9 @@
             this.label1.Font = new System.Drawing.Font("Verdana", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(134, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(541, 53);
+            this.label1.Size = new System.Drawing.Size(556, 53);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Benvenuti in pizzeria";
+            this.label1.Text = "Benvenuto in pizzeria";
             // 
             // label2
             // 
