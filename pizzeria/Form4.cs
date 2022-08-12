@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pizzeria
 {
-    public partial class Form3 : Form
+    public partial class Form4 : Form
     {
-        public Form3()
+        public Form4()
         {
             InitializeComponent();
         }
@@ -20,16 +20,8 @@ namespace pizzeria
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 Form3 = new Form1();
-            Form3.ShowDialog();
-            this.Close();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form4 Form3 = new Form4();
-            Form3.ShowDialog();
+            Form3 Form4 = new Form3();
+            Form4.ShowDialog();
             this.Close();
         }
     }
