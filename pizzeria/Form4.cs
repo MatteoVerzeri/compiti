@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace pizzeria
 {
@@ -23,6 +24,15 @@ namespace pizzeria
             Form3 Form4 = new Form3();
             Form4.ShowDialog();
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string filename;
+            string content;
+                StreamWriter sw = new StreamWriter(filename);
+                sw.WriteLine(content);
+                sw.Close();
         }
     }
 }
