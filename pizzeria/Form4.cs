@@ -28,11 +28,16 @@ namespace pizzeria
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string filename;
+           /* string filename;
             string content;
                 StreamWriter sw = new StreamWriter(filename);
                 sw.WriteLine(content);
-                sw.Close();
+                sw.Close();*/
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
