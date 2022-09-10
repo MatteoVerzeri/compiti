@@ -31,7 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -47,7 +46,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -76,18 +74,9 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Scegli il piatto da modificare";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(380, 156);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "modifica";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(683, 437);
+            this.button2.Location = new System.Drawing.Point(473, 266);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 47);
             this.button2.TabIndex = 29;
@@ -207,21 +196,11 @@
             this.label9.TabIndex = 15;
             this.label9.Text = "nuovo nome";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(12, 437);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 47);
-            this.button3.TabIndex = 30;
-            this.button3.Text = "annulla";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 496);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
@@ -237,7 +216,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -254,7 +232,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
@@ -270,6 +247,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button3;
     }
 }

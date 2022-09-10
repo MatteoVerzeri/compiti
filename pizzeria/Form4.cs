@@ -20,10 +20,10 @@ namespace pizzeria
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form3 Form4 = new Form3();
-            Form4.ShowDialog();
-            this.Close();
+            Form3 form3 = new Form3();
+            this.Visible = false;
+            form3.ShowDialog();
+            this.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)

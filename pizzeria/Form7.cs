@@ -31,7 +31,7 @@ namespace pizzeria
             int counter = 0;
 
             // Read the file and display it line by line.  
-            foreach (string line in System.IO.File.ReadLines(@"./menu.txt"))
+            foreach (string line in System.IO.File.ReadLines(@"./menug.txt"))
             {
                 if (line.Contains(nome))
                 {
@@ -114,7 +114,7 @@ namespace pizzeria
                 }
                 
             }
-            StreamReader sr = new StreamReader("./menu.txt");
+            StreamReader sr = new StreamReader("./menug.txt");
             string linea = "";
             string stampatutto = null;
             linea = "";
@@ -137,7 +137,7 @@ namespace pizzeria
                 }
             }
             sr.Close();
-            File.WriteAllText("./menu.txt", stampatutto);
+            File.WriteAllText("./menug.txt", stampatutto);
             this.Close();
 
         }

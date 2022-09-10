@@ -22,10 +22,10 @@ namespace pizzeria
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form1 Form2 = new Form1();
-            Form2.ShowDialog();
-            this.Close();
+            Form1 form1 = new Form1();
+            this.Visible = false;
+            form1.ShowDialog();
+            this.Visible = true;
         }
 
        /* private void button1_Click(object sender, EventArgs e)
@@ -56,10 +56,11 @@ namespace pizzeria
             {
                 if (textBox1.Text == username && textBox1.Text != null)
                 {
-                    this.Hide();
-                    Form5 Form2 = new Form5();
-                    Form2.ShowDialog();
-                    this.Close();
+                    
+                    Form5 form5 = new Form5();
+                    this.Visible = false;
+                    form5.ShowDialog();
+                    this.Visible = true;
                 }
                 else
                 {
@@ -70,6 +71,11 @@ namespace pizzeria
             {
                 throw new Exception("username o password errati");
             }
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

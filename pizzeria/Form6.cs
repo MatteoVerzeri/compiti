@@ -15,6 +15,7 @@ namespace pizzeria
     public partial class Form6 : Form
     {
         
+        
         public Form6()
         {
             InitializeComponent();
@@ -28,34 +29,39 @@ namespace pizzeria
         {
             uniscipiatto();
             MessageBox.Show("Piatto inserito con successo");
-            this.Hide();
-            Form5 Form6 = new Form5();
-            Form6.ShowDialog();
-            this.Close();
+            
         }
-        public void Scrivi(string piattocompleto)
+        public static void scriviAppend(string filename, string content)
         {
-            StreamWriter sw = new StreamWriter("./menu.txt");
-            sw.WriteLine(piattocompleto);
+            var oStream = new FileStream(filename, FileMode.Append, FileAccess.Write, FileShare.Read);
+            StreamWriter sw = new StreamWriter(oStream);
+            sw.WriteLine(content);
             sw.Close();
         }
         public void uniscipiatto() 
         {
+            double r;
+            try
+            {
+                 r = Convert.ToDouble(textBox2.Text);
+            }
+            catch
+            {
+                throw new Exception("inserire un prezzo valido");
+            }
             string piattocompleto;
             if (textBox1.Text != null && textBox2.Text != null && textBox3.Text != null && textBox4.Text != null && textBox5.Text != null && textBox6.Text != null && textBox7.Text != null)
             {
-                try
-                {
-                    double p = Convert.ToDouble(textBox2.Text);
+                if( r == Convert.ToDouble(textBox2.Text)){
                     string sep = ";";
                     piattocompleto = textBox1.Text + sep + textBox2.Text + sep + textBox3.Text + sep + textBox4.Text + sep + textBox5.Text + sep + textBox6.Text + sep + textBox7.Text + sep + "True";
-                    Scrivi(piattocompleto);
+                    scriviAppend(@"./menug.txt", piattocompleto);
                     this.Close();
                 }
-                catch
-                {
-                    throw new Exception("inserire un prezzo valido");
-                }
+                 
+                
+                    
+                
             }
         }
 
