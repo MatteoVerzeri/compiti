@@ -51,21 +51,64 @@ namespace pizzeria
                 throw new Exception("inserire un prezzo valido");
             }
             string piattocompleto;
-            if (textBox1.Text != null && textBox2.Text != null && textBox3.Text != null && textBox4.Text != null && textBox5.Text != null && textBox6.Text != null && textBox7.Text != null)
+            if (textBox1.Text != null && textBox2.Text != null && textBox3.Text != null && textBox3.Text == "primo" || textBox3.Text == "secondo" || textBox3.Text == "contorno" || textBox3.Text == "dolce" && textBox4.Text != null && textBox5.Text != null && textBox6.Text != null && textBox7.Text != null)
             {
                 if( r == Convert.ToDouble(textBox2.Text)){
                     string sep = ";";
                     piattocompleto = textBox1.Text + sep + textBox2.Text + sep + textBox3.Text + sep + textBox4.Text + sep + textBox5.Text + sep + textBox6.Text + sep + textBox7.Text + sep + "True";
                     scriviAppend(@"./menug.txt", piattocompleto);
                     this.Close();
-                }
-                 
-                
-                    
-                
+                }    
+            }
+            else
+            {
+                throw new Exception("dati inseriti non validi");
             }
         }
 
-       
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

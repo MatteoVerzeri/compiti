@@ -20,24 +20,46 @@ namespace pizzeria
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
-            this.Visible = false;
-            form3.ShowDialog();
-            this.Visible = true;
-        }
+            StreamReader sr = new StreamReader(@"./menug.txt");
+            string stampa = null;
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-           /* string filename;
-            string content;
-                StreamWriter sw = new StreamWriter(filename);
-                sw.WriteLine(content);
-                sw.Close();*/
-        }
+            /*linea.Split(';');
+            string nome = linea.Split(';')[0];
+            */
+            try
+            {
 
-        private void Form4_Load(object sender, EventArgs e)
-        {
 
+
+                foreach (string line in System.IO.File.ReadLines(@"./menug.txt"))
+                {
+                    if (line.Split(';')[0] == textBox1.Text)
+                    {
+
+
+
+
+
+
+                        string sep = ";";
+                        stampa += line.Split(';')[0] + sep + line.Split(';')[1] + sep + line.Split(';')[2] + sep + line.Split(';')[3] + sep + line.Split(';')[4] + sep + line.Split(';')[5] + sep + line.Split(';')[6] + sep + "True\n";
+
+                    }
+                    else
+                    {
+
+                        stampa += line;
+                        stampa += "\n";
+                    }
+                }
+                sr.Close();
+                File.WriteAllText(@"./menug.txt", stampa);
+                this.Close();
+            }
+            catch
+            {
+                throw new Exception("piatto non trovato");
+            }
         }
     }
 }

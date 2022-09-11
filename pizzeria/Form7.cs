@@ -44,31 +44,42 @@ namespace pizzeria
                         mod += line.Split(';')[0];
                     }
                     mod += ";";
-                    if (textBox3.Text != null)
+                    if (textBox3.Text != "")
                     {
                         mod += textBox3.Text;
+                        if (textBox3.Text != null)
+                        {
+                            try
+                            {
+                                double conv = Convert.ToDouble(textBox3.Text);
+                            }
+                            catch
+                            {
+                                throw new Exception("inserire un prezzo valido");
+                            }
+                        }
                     }
                     else
                     {
-                        mod += line.Split(';')[1];
-                        try
-                        {
-                            double conv = Convert.ToDouble(textBox1.Text);
-                        }
-                        catch
-                        {
-                            throw new Exception("inserire un prezzo valido");
-                        }
+                        mod += line.Split(';')[1];  
                     }
                     mod += ";";
-                    if (textBox4.Text != "")
+                    if (textBox4.Text != "" )
                     {
                         mod += textBox4.Text;
                     }
-                    else
+                    else if (textBox4.Text != "primo" || textBox4.Text != "secondo" || textBox4.Text != "contorno" || textBox4.Text != "dolce")
                     {
                         mod += line.Split(';')[2];
+                        MessageBox.Show("la portata non è stata cambiata");
                     }
+                    else
+                    {
+                        
+                        mod += line.Split(';')[2];
+                    }
+
+                    
                     mod += ";";
                     if (textBox5.Text != "")
                     {

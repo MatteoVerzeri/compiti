@@ -42,5 +42,10 @@ namespace pizzeria
             form3.ShowDialog();
             this.Visible = true;
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

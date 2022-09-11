@@ -75,5 +75,13 @@ namespace pizzeria
             form9.ShowDialog();
             this.Visible = true;
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form4 form10 = new Form4();
+            this.Visible = false;
+            form10.ShowDialog();
+            this.Visible = true;
+        }
     }
 }
