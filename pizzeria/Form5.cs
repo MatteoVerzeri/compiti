@@ -50,6 +50,7 @@ namespace pizzeria
                 }
                 y = sr.ReadLine();
             }
+            sr.Close();
             MessageBox.Show(stampa);
             
         }
@@ -65,6 +66,14 @@ namespace pizzeria
         private void Form5_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form9 form9 = new Form9();
+            this.Visible = false;
+            form9.ShowDialog();
+            this.Visible = true;
         }
     }
 }

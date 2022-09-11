@@ -37,6 +37,7 @@ namespace pizzeria
             StreamWriter sw = new StreamWriter(oStream);
             sw.WriteLine(content);
             sw.Close();
+            oStream.Close();
         }
         public void uniscipiatto() 
         {

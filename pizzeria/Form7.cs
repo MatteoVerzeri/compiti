@@ -35,7 +35,7 @@ namespace pizzeria
             {
                 if (line.Contains(nome))
                 {
-                    if(textBox2.Text != null)
+                    if(textBox2.Text != "")
                     {
                         mod += textBox2.Text;
                     }
@@ -61,7 +61,7 @@ namespace pizzeria
                         }
                     }
                     mod += ";";
-                    if (textBox4.Text != null)
+                    if (textBox4.Text != "")
                     {
                         mod += textBox4.Text;
                     }
@@ -70,7 +70,7 @@ namespace pizzeria
                         mod += line.Split(';')[2];
                     }
                     mod += ";";
-                    if (textBox5.Text != null)
+                    if (textBox5.Text != "")
                     {
                         mod += textBox5.Text;
                     }
@@ -79,7 +79,7 @@ namespace pizzeria
                         mod += line.Split(';')[3];
                     }
                     mod += ";";
-                    if (textBox6.Text != null)
+                    if (textBox6.Text != "")
                     {
                         mod += textBox6.Text;
                     }
@@ -88,7 +88,7 @@ namespace pizzeria
                         mod += line.Split(';')[4];
                     }
                     mod += ";";
-                    if (textBox7.Text != null)
+                    if (textBox7.Text != "")
                     {
                         mod += textBox7.Text;
                     }
@@ -97,7 +97,7 @@ namespace pizzeria
                         mod += line.Split(';')[5];
                     }
                     mod += ";";
-                    if (textBox8.Text != null)
+                    if (textBox8.Text != "")
                     {
                         mod += textBox8.Text;
                     }
